@@ -12,12 +12,20 @@
     font-weight: 400;
     text-align: center;
     text-decoration: none;
-    background: -webkit-gradient(linear,left top,left bottom,from(#fd6a63),color-stop(40%,#feb46b),color-stop(40%,#fff),to(#fff));
-    background: linear-gradient(180deg,#fd6a63,#feb46b 40%,#fff 0,#fff);
+    background: -webkit-gradient(linear,left top,left bottom,from(#1724fd),color-stop(40%,#feb46b),color-stop(40%,#fff),to(#fff));
+    background: linear-gradient(180deg, #272bfd,#feb46b 40%,#fff 0,#fff);
     margin: 20px 25px;
     cursor: pointer;
     -webkit-transition: .3s;
     transition: .3s;
+}
+.all-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 15px;
+    max-width: 1440px;
+    margin: auto;
 }
 .card .avatar {
     width: 140px;
