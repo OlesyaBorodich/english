@@ -1,15 +1,15 @@
 import React from 'react';
-import './Card.css'
+import './MainCard.css'
 import {NavLink} from "react-router-dom";
 
 
-const Card = (props) => {
-    let colorClass=props.isTrain?'blue':'red'
+const MainCard = (props) => {
+    let colorClass=props.isTrain?'card blue':'card red'
   return (
-     <NavLink to={props.href} className="card">
+     <NavLink to={props.href} className={colorClass}>
          <img className='avatar'alt="Remy Sharp" src={props.url}/>
          {props.title}
      </NavLink>
   )
 }
-export default Card;
+export default MainCard;
