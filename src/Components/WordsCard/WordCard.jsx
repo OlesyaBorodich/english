@@ -1,15 +1,19 @@
 import React from 'react';
 import './WordCard.css'
-import {NavLink} from "react-router-dom";
 
 
 const WordCard = (props) => {
     let colorClass=props.isTrain?'card blue':'card red'
   return (
-     <NavLink to={props.href} className={colorClass}>
-         <img className='avatar'alt="Word" src={props.url}/>
+
+      <div className='card-container'>
+     <div to={props.href} className='card'>
+         <img  src={props.url}/>
          {props.title}
-     </NavLink>
+         <div className='rotate'></div>
+     </div>
+         </div>
+
   )
 }
 export default WordCard;

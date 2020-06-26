@@ -60,7 +60,8 @@ class App extends React.Component {
                     <div className='content'>
                         <Route exact path='/' render={() => < Main cards={this.state.cardsCategory}
                                                              isTrain={this.state.isTrain}/>}/>
-                        <Route path='/countries' render={() => < WordCards/>}/>
+                        <Route path='/countries' render={() => < WordCards cards={this.state.cardsCategory}
+                                                                           isTrain={this.state.isTrain}/>}/>
                         {/*<Route path='/clothes' render={() => < Clothes/>}/>*/}
                         {/*<Route path='/food' render={() => <Food/>}/>*/}
                         {/*<Route path='/emotions' render={() => <Emotions/>}/>*/}
