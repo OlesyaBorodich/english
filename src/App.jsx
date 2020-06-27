@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import {BrowserRouter, Route} from "react-router-dom";
 import Menu from "./Components/Menu";
@@ -60,16 +59,24 @@ class App extends React.Component {
                     <div className='content'>
                         <Route exact path='/' render={() => < Main cards={this.state.cardsCategory}
                                                              isTrain={this.state.isTrain}/>}/>
-                        <Route path='/countries' render={() => < WordCards cards={this.state.cardsCategory}
+                        <Route path='/countries' render={() => <WordCards cards={this.state.cardsCategory}
                                                                            isTrain={this.state.isTrain}/>}/>
-                        {/*<Route path='/clothes' render={() => < Clothes/>}/>*/}
-                        {/*<Route path='/food' render={() => <Food/>}/>*/}
-                        {/*<Route path='/emotions' render={() => <Emotions/>}/>*/}
-                        {/*<Route path='/animals' render={() => <Animals/>}/>*/}
-                        {/*<Route path='/sport' render={() => <Sport/>}/>*/}
-                        {/*<Route path='/weather' render={() => <Weather/>}/>*/}
-                        {/*<Route path='/card' render={() => <WordCards/>}/>*/}
-                        {/*<Route path='/entertainment' render={() => <Entertainment/>}/>*/}
+                        <Route path='/clothes' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                         isTrain={this.state.isTrain}/>}/>
+                        <Route path='/food' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                     isTrain={this.state.isTrain}/>}/>
+                        <Route path='/emotions' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                         isTrain={this.state.isTrain}/>}/>
+                        <Route path='/animals' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                        isTrain={this.state.isTrain}/>}/>
+                        <Route path='/sport' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                      isTrain={this.state.isTrain}/>}/>
+                        <Route path='/weather' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                        isTrain={this.state.isTrain}/>}/>
+                        <Route path='/card' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                     isTrain={this.state.isTrain}/>}/>
+                        <Route path='/entertainment' render={() => <WordCards cards={this.state.cardsCategory}
+                                                                              isTrain={this.state.isTrain}/>}/>
                         {/*тут тебе нжуно сделать одну компоненту Words с разными словами картинкой и аудио и понять как потом ъодить по ссылкам*/}
                     </div>
 
