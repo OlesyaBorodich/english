@@ -1,25 +1,29 @@
-.card{
-    position: relative;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    display: flex;
+.cardword {
     box-sizing: border-box;
-    justify-content: flex-end;
+    overflow:hidden;
     width: 300px;
     height: 250px;
     border: 1px solid #ccc;
     border-radius: 1px;
     margin: 20px 25px;
     box-shadow: 0 1px 3px 0 #ccc;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
-    -webkit-transition: box-shadow .25s linear,-webkit-transform .7s;
-    transition: box-shadow .25s linear,-webkit-transform .7s;
-    transition: box-shadow .25s linear,transform .7s;
-    transition: box-shadow .25s linear,transform .7s,-webkit-transform .7s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .4);
+}
+.cardword img{
+    height: 200px;
+    margin: 0;
 }
 .card-container {
     -webkit-perspective: 500px;
     perspective: 500px;
+}
+.shadow:hover {
+    box-shadow: 0 0 5px 2px;
+}
+.word{
+    background-color: #61dafb;
+    display: flex;
+    height: 50px;
 }
 .all-cards{
     display: flex;
@@ -30,13 +34,11 @@
     margin: auto;
 }
 .rotate {
-    position: absolute;
     width: 30px;
     height: 30px;
     background-image: url(https://www.pngfind.com/pngs/m/50-503494_png-file-rotation-arrows-png-transparent-png.png);
     background-size: 32px;
     background-repeat: no-repeat;
-    background-position: center 16px;
     bottom: 5px;
     right: 5px;
     -webkit-transition: .3s;
@@ -44,5 +46,81 @@
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
+.card{
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    box-sizing: border-box;
+    background-size: contain;
+    justify-content: flex-end;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    margin: 20px 25px;
+    box-shadow: 0 1px 3px 0 #ccc;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.4);
+    -webkit-transition: box-shadow .25s linear,-webkit-transform .7s;
+    transition: box-shadow .25s linear,-webkit-transform .7s;
+    transition: box-shadow .25s linear,transform .7s;
+    transition: box-shadow .25s linear,transform .7s,-webkit-transform .7s;
+}
 
+/* переверните сторону при проведении мышью */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+    width: 320px;
+    height: 380px;
+}
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
 
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* лицевая сторона размещена над обратной */
+.front {
+    z-index: 2;
+}
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
+}
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+    perspective: 1000;
+}
+/* переверните сторону при проведении мышью */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* лицевая сторона размещена над обратной */
+.front {
+    z-index: 2;
+}
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
+}
