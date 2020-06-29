@@ -3,6 +3,9 @@ import './WordCard.css'
 
 
 class WordCardStatic extends React.Component {
+    changeIsOver=()=>{
+        this.props.changeIsOverturn();
+    }
     render() {
         return (
             <div>
@@ -12,7 +15,7 @@ class WordCardStatic extends React.Component {
                             backgroundImage: `url(${this.props.url})`,
                             height: 200,
                             width: 300,
-                            backgroundPosition: " center ",
+                            backgroundPosition: "center ",
                         }}/> :
                         <div style={{
                             backgroundImage: `url(${this.props.url})`,
@@ -24,7 +27,7 @@ class WordCardStatic extends React.Component {
                         }}/>}
                     {this.props.isTrain ? <div className='word'>
                             {this.props.word}
-                            <div className='rotate'></div>
+                            <div className='rotate' onClick={this.changeIsOver}></div>
                         </div>
                         : null}
                 </div>

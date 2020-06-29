@@ -4,20 +4,14 @@ import './WordCard.css'
 
 class WordCard extends React.Component {
     state = {
-        isHover: true
+        isHover: false
     }
 
   setIsHover = () => {
        this.setState({isHover: !this.state.isHover})
     }
-    lala = () => {
-        alert('lalala');
-    }
-
     render() {
-
         return (
-
                     <div className='flip-container'>
                         <div className='flipper'>
                             {
@@ -25,7 +19,7 @@ class WordCard extends React.Component {
                                     <div className='front'>
                                         <div className='card-block'>
                                             <div className='flip-container'>
-                                            <div className='shadow'>
+
                                                 <div to={this.props.href} className='cardword'>
                                                     <div style={{
                                                         backgroundImage: `url(${this.props.url})`,
@@ -39,7 +33,6 @@ class WordCard extends React.Component {
                                                         </div>
                                                         : null}
                                                 </div>
-                                            </div>
                                             </div>
                                         </div>
                                     </div>
