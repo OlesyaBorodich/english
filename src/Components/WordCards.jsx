@@ -1,12 +1,14 @@
 import React from 'react';
 import '../App.css'
 import   './WordsCard/WordCard.css'
-import WordCard from "./WordsCard/WordCard";
 import StartGame from "./StartGame";
+import WordCard from "./WordsCard/WordCard";
+
 
 
 const WordCards = (props) => {
     let wordCards=props.cards.map(c=><WordCard word={c.word}
+                                               translate={c.translate}
                                                url={c.url}
                                                isTrain={props.isTrain}/>);
     return (
