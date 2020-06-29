@@ -13,7 +13,7 @@ class WordCard extends React.Component {
     }
     render() {
         // let classFlipper = this.state.isOverturn? 'flipper': '';
-        // let classContainer = this.state.isOverturn? 'flip-container': ''
+        // let classContainer = this.state.isOverturn? 'flip-container': '
         return (
               <div className='flipper'>
                   <div className='flip-container'>
