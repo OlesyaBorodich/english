@@ -10,11 +10,15 @@ const WordCards = (props) => {
     let wordCards=props.cards.map(c=><WordCard word={c.word}
                                                translate={c.translate}
                                                url={c.url}
-                                               isTrain={props.isTrain}/>);
+                                               audioId={c.audioId}
+                                               audioArr={props.audioArr}
+                                               isTrain={props.isTrain}
+                                               checkAudio={props.checkAudio}/>);
     return (
         <div className='all-cards'>
             {wordCards}
-            {props.isTrain?null:<StartGame/>}
+            {props.isTrain?null:<StartGame audioArr={props.audioArr}
+                                           setCurrentAudio={props.setCurrentAudio}/>}
         </div>
     )
 }

@@ -8,7 +8,7 @@ const Button = (props) => {
 
   return (
       <div>
-          <button onClick={changeButton}>{props.buttonMood}</button>
+          <button onClick={changeButton} >{props.buttonMood}</button>
       </div>
   )
 }

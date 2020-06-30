@@ -3,31 +3,35 @@ import './WordCard.css'
 
 
 class WordCardStatic extends React.Component {
-    changeIsOver=()=>{
+    changeIsOverturn=()=>{
         this.props.changeIsOverturn();
     }
+    checkResponse=()=>{
+        this.props.checkAudio(this.props.audioId)
+    }
     render() {
+
         return (
-            <div>
+            <div className='shadow'>
                 <div to={this.props.href} className='cardword'>
                     {this.props.isTrain ?
-                        <div style={{
+                        <div  style={{
                             backgroundImage: `url(${this.props.url})`,
                             height: 200,
-                            width: 300,
                             backgroundPosition: "center ",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover"
                         }}/> :
-                        <div style={{
+                        <div onClick={this.checkResponse} style={{
                             backgroundImage: `url(${this.props.url})`,
                             height: 250,
-                            width: 300,
                             backgroundPosition: " center ",
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}/>}
                     {this.props.isTrain ? <div className='word'>
                             {this.props.word}
-                            <div className='rotate' onClick={this.changeIsOver}></div>
+                            {this.props.isOverturn && <div className='rotate' onClick={this.changeIsOverturn}/>}
                         </div>
                         : null}
                 </div>
