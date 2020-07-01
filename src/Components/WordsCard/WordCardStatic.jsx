@@ -7,6 +7,7 @@ class WordCardStatic extends React.Component {
         this.props.changeIsOverturn();
     }
     checkResponse=()=>{
+        debugger;
         this.props.checkAudio(this.props.audioId)
     }
     render() {

@@ -17,8 +17,8 @@ class WordCard extends React.Component {
         this.changeIsOverturn()
     }
     onSound=()=>{
-
-       const audio = new Audio(this.props.audioArr.find(a=> a.id === this.props.audio));
+        debugger;
+       const audio = new Audio(this.props.audioArr.find(a=> a.id === this.props.audioId));
        audio.play()
     }
     render() {

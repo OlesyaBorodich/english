@@ -5,10 +5,18 @@ const Button = (props) => {
     let changeButton=()=>{
         props.changeButtonMood()
     }
-
   return (
       <div>
-          <button onClick={changeButton} >{props.buttonMood}</button>
+          <label className='switch' onClick={changeButton} >
+              <input type='checkbox' className='switch-input' >
+
+              </input>
+              <span className='switch-label' data-on='Train' data-off='Play'>
+
+              </span>
+              <span className='switch-handle'>
+              </span>
+          </label>
       </div>
   )
 }

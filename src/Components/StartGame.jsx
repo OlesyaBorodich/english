@@ -4,7 +4,7 @@ import './StartGame.css'
 class Button extends React.Component {
     state = {
         isRepeat: true,
-        number: 1
+        number: null
     }
     startGame = () => {
         this.setState({
@@ -13,13 +13,14 @@ class Button extends React.Component {
         this.playRandom();
     }
     playRandom = () => {
-        let numberR = Math.floor(Math.random() * Math.floor(8));
-        this.setState({
-            number: numberR
-        })
-        const audioId = this.props.audioArr[this.state.number].id;
-        new Audio(this.props.audioArr[this.state.number].audio).play();
-        this.props.setCurrentAudio(audioId)
+        debugger
+       this.props.playRandom();
+        // const audioId = this.props.audioArr[this.props.currentAudioId].id;
+        // this.props.setCurrentAudio(audioId);
+        // new Audio(this.props.audioArr[this.props.currentAudioId].audio).play();
+    }
+    repeatAgain=()=>{
+        new Audio(this.props.audioArr[this.props.currentAudioId].audio).play();
     }
 
     render() {
@@ -31,7 +32,7 @@ class Button extends React.Component {
                     </div>
                     :
                     <div className='buttonContainer'>
-                        <button className='repeat'><span className='buttonImg'></span></button>
+                        <button className='repeat' onClick={this.repeatAgain}><span className='buttonImg'></span></button>
                     </div>}
             </div>
         )
