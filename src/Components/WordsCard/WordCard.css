@@ -5,6 +5,9 @@
     max-width: 1440px;
     margin: auto;
 }
+.stars{
+
+}
 .cardword {
     border: 1px solid #ccc;
     box-shadow: 0 1px 3px 0 #ccc;
@@ -12,7 +15,7 @@
 
 }
 .shadow:hover {
-    box-shadow: 0 0 5px 2px;
+    box-shadow: -1px 5px 15px 0 rgba(0,0,0,.5);
 }
 .word{
     display: flex;
@@ -34,14 +37,6 @@
     width: 320px;
     height: 250px;
 }
-
-/* здесь находится скорость перевертывания */
-.flipper {
-    /*transition: 0.6s;*/
-    /*transform-style: preserve-3d;*/
-    /*position: relative;*/
-}
-
 /* скройте обратную сторону во время переворота */
 .back {
     transition: 0.6s;
@@ -57,7 +52,3 @@
     transform: rotateY(0deg);
     position: absolute;
 }
-/* обратная, изначально скрытая сторона */
-/*.back {*/
-/*    transform: rotateY(180deg);*/
-/*}*/

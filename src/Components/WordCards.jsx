@@ -19,18 +19,14 @@ const WordCards = (props) => {
                                                    checkAudio={props.checkAudio}/>);
     return (
         <div>
-            {props.end
-                ? <End/>
-                : <div>
-                    {allStars}
-                    <div className='all-cards'>
+            {props.end ? <End/> : <div className='all-cards'>
                         {wordCards}
-                        {props.isTrain ? null : <StartGame audioArr={props.audioArr}
+                        {props.isTrain ? null : <div className='starts'>{allStars}<StartGame audioArr={props.audioArr}
                                                            playRandom={props.playRandom}
                                                            setCurrentAudio={props.setCurrentAudio}
-                                                           currentAudioId={props.currentAudioId}/>}
-                    </div>
-                </div>}</div>
+                                                           currentAudioId={props.currentAudioId}/>
+                            </div>}
+                    </div>}</div>
     )
 }
 

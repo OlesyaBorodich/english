@@ -7,8 +7,8 @@ const Button = (props) => {
     }
   return (
       <div>
-          <label className='switch' onClick={changeButton} >
-              <input type='checkbox' className='switch-input' >
+          <label className='switch'  >
+              <input type='checkbox' className='switch-input' onClick={changeButton}>
 
               </input>
               <span className='switch-label' data-on='Train' data-off='Play'>

@@ -13,11 +13,7 @@ class Button extends React.Component {
         this.playRandom();
     }
     playRandom = () => {
-        debugger
        this.props.playRandom();
-        // const audioId = this.props.audioArr[this.props.currentAudioId].id;
-        // this.props.setCurrentAudio(audioId);
-        // new Audio(this.props.audioArr[this.props.currentAudioId].audio).play();
     }
     repeatAgain=()=>{
         new Audio(this.props.audioArr[this.props.currentAudioId].audio).play();

@@ -99,26 +99,18 @@ class App extends React.Component {
         arrayStars: [],
         numbers: [9],
         numberRandom: 8,
-        end:false
+        end:false,
+        isStart:false
     }
     playRandom = () => {
         debugger
         let a = 0;
         let numberR = Math.floor(Math.random() * Math.floor(this.state.numberRandom));
-        /*for (let i = 0; i <= this.state.numbers.length; i++) {
-            if (this.state.numbers[i] !== numberR) {
-                a++;
-
-            }
-        }*/
-
         this.state.numbers.forEach((n) => {
             if (n !== numberR) {
                 a = a + 1
             }
         })
-
-
         if (a === this.state.numbers.length) {
             new Audio(this.state.audioArr[numberR].audio).play();
             this.setState({
@@ -134,7 +126,6 @@ class App extends React.Component {
             }
             this.playRandom()
         }
-
     }
     setCurrentAudio = (audioId) => {
         debugger
@@ -156,11 +147,9 @@ class App extends React.Component {
         this.state.arrayStars.push(1)
     }
     changeButtonMood = () => {
-        if (this.state.buttonMood === 'TRAIN') {
-            this.setState({buttonMood: 'PLAY', isTrain: false})
-        } else {
-            this.setState({buttonMood: 'TRAIN', isTrain: true})
-        }
+
+            this.setState({isTrain: !this.state.isTrain,
+            arrayStars:[]})
     }
 
     render() {
@@ -185,8 +174,11 @@ class App extends React.Component {
                                                                           audioArr={this.state.audioArr}
                                                                           playRandom={this.playRandom}
                                                                           arrayStars={this.state.arrayStars}
+                                                                          isTrain={this.state.isTrain}
                                                                           currentAudioId={this.state.currentAudioId}
                                                                           count={this.state.count}/>}/>
+
+
                         <Route path='/clothes' render={() => <WordCards cards={this.state.cardsCategory}
                                                                         isTrain={this.state.isTrain}/>}/>
                         <Route path='/food' render={() => <WordCards cards={this.state.cardsCategory}

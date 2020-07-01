@@ -17,9 +17,9 @@ class WordCard extends React.Component {
         this.changeIsOverturn()
     }
     onSound=()=>{
-        debugger;
-       const audio = new Audio(this.props.audioArr.find(a=> a.id === this.props.audioId));
-       audio.play()
+        if(this.props.isTrain) {
+            new Audio(this.props.audioArr.find(a => a.id === this.props.audioId).audio).play()
+        }
     }
     render() {
          let classFlipper = this.state.isOverturn? 'flipper': '';

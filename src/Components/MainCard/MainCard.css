@@ -17,6 +17,9 @@
     -webkit-transition: .3s;
     transition: .3s;
 }
+.card:hover {
+    box-shadow: -1px 5px 15px 0 rgba(0,0,0,.5);
+}
 .blue{
     background: -webkit-gradient(linear,left top,left bottom,from(#1724fd),color-stop(40%,#feb46b),color-stop(40%,#fff),to(#fff));
     background: linear-gradient(180deg, #272bfd,#feb46b 40%,#fff 0,#fff);

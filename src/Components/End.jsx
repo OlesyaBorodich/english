@@ -1,18 +1,11 @@
 import React from 'react';
 import '../App.css'
-import {Redirect, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 class End extends React.Component {
-
-    // state = {
-    //     redirect: false
-    // }
-
-
     componentDidMount() {
         debugger
         setTimeout(() => {
-            // this.setState({redirect: true})
             this.props.history.push('/')
         }, 2000)
     }

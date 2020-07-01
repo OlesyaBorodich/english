@@ -115,13 +115,12 @@ body {
   }
 }
 
-
-
 .header{
   justify-content: space-between;
   height: 45px;
   display: flex;
-  margin: 45px 50px;
+  max-width: 1000px;
+  margin: 40px auto 0;
 }
 .switch {
   position: relative;
