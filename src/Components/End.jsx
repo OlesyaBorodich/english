@@ -7,11 +7,10 @@ import fail from '../audio/fail.png'
 class End extends React.Component {
     componentDidMount() {
         setTimeout(() => {
+            this.props.updateState();
             this.props.history.push('/')
         }, 2000)
     }
-
-
     render() {
         return (
             <div className='end-content'>

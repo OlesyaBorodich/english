@@ -21,8 +21,6 @@ const Menu = (props) => {
               <div className='item'><NavLink to='/animals' activeClassName='active'>Animals</NavLink></div>
               <div className='item'><NavLink to='/sport' activeClassName='active'>Sport</NavLink></div>
               <div className='item'><NavLink to='/weather' activeClassName='active'>Weather</NavLink></div>
-              <div className='item'><NavLink to='/card' activeClassName='active'>Card</NavLink></div>
-
               <div className='item'><NavLink to='/entertainment' activeClassName='active'>Entertainment</NavLink></div>
           </div>
         </div>

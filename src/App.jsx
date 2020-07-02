@@ -589,6 +589,19 @@ class App extends React.Component {
         end:false,
         isStart:false
     }
+    updateState=()=>{
+        this.setState({
+            buttonMood: 'TRAIN',
+            isTrain: false,
+            currentAudioId: 6,
+            count: 0,
+            arrayStars: [],
+            numbers: [9],
+            numberRandom: 8,
+            end:false,
+            isStart:false
+        })
+    }
     changeStart=()=>{
         this.setState({
             isStart:!this.state.isStart
@@ -674,7 +687,8 @@ class App extends React.Component {
                                                                           isStart={this.state.isStart}
                                                                           changeStart={this.changeStart}
                                                                           currentAudioId={this.state.currentAudioId}
-                                                                          count={this.state.count}/>}/>
+                                                                          count={this.state.count}
+                                                                          updateState={this.updateState}/>}/>
 
 
                         <Route path='/clothes' render={() => <WordCards      cards={this.state.cardsClothes}
@@ -689,7 +703,8 @@ class App extends React.Component {
                                                                              isStart={this.state.isStart}
                                                                              changeStart={this.changeStart}
                                                                              currentAudioId={this.state.currentAudioId}
-                                                                             count={this.state.count}/>}/>
+                                                                             count={this.state.count}
+                                                                             updateState={this.updateState}/>}/>
 
 
                         <Route path='/food' render={() => <WordCards      cards={this.state.cardsFood}
@@ -704,7 +719,8 @@ class App extends React.Component {
                                                                           isStart={this.state.isStart}
                                                                           changeStart={this.changeStart}
                                                                           currentAudioId={this.state.currentAudioId}
-                                                                          count={this.state.count}/>}/>
+                                                                          count={this.state.count}
+                                                                          updateState={this.updateState}/>}/>
 
 
                         <Route path='/emotions' render={() => <WordCards  cards={this.state.cardsEmotions}
@@ -719,7 +735,8 @@ class App extends React.Component {
                                                                           isStart={this.state.isStart}
                                                                           changeStart={this.changeStart}
                                                                           currentAudioId={this.state.currentAudioId}
-                                                                          count={this.state.count}/>}/>
+                                                                          count={this.state.count}
+                                                                          updateState={this.updateState}/>}/>
 
                         <Route path='/animals' render={() => <WordCards cards={this.state.cardsAnimals}
                                                                         isTrain={this.state.isTrain}
@@ -733,7 +750,8 @@ class App extends React.Component {
                                                                         isStart={this.state.isStart}
                                                                         changeStart={this.changeStart}
                                                                         currentAudioId={this.state.currentAudioId}
-                                                                        count={this.state.count}/>}/>
+                                                                        count={this.state.count}
+                                                                        updateState={this.updateState}/>}/>
 
 
                         <Route path='/sport' render={() => <WordCards cards={this.state.cardsSport}
@@ -748,7 +766,8 @@ class App extends React.Component {
                                                                       isStart={this.state.isStart}
                                                                       changeStart={this.changeStart}
                                                                       currentAudioId={this.state.currentAudioId}
-                                                                      count={this.state.count}/>}/>
+                                                                      count={this.state.count}
+                                                                      updateState={this.updateState}/>}/>
 
 
                         <Route path='/weather' render={() => <WordCards cards={this.state.cardsWeather}
@@ -763,7 +782,8 @@ class App extends React.Component {
                                                                         isStart={this.state.isStart}
                                                                         changeStart={this.changeStart}
                                                                         currentAudioId={this.state.currentAudioId}
-                                                                        count={this.state.count}/>}/>
+                                                                        count={this.state.count}
+                                                                        updateState={this.updateState}/>}/>
 
 
 
@@ -779,7 +799,8 @@ class App extends React.Component {
                                                                               isStart={this.state.isStart}
                                                                               changeStart={this.changeStart}
                                                                               currentAudioId={this.state.currentAudioId}
-                                                                              count={this.state.count}/>}/>
+                                                                              count={this.state.count}
+                                                                              updateState={this.updateState}/>}/>
 
                     </div>
 

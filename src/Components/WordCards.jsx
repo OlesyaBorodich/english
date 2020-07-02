@@ -20,7 +20,8 @@ const WordCards = (props) => {
     return (
         <div>
             {props.isStart?<div className='starts'>{allStars}</div>:null}
-            {props.end ? <End count={props.count}/> : <div className='all-cards'>
+            {props.end ? <End count={props.count}
+                              updateState={props.updateState}/> : <div className='all-cards'>
                         {wordCards}
                         {props.isTrain ? null : <StartGame audioArr={props.audioArr}
                                                            playRandom={props.playRandom}
