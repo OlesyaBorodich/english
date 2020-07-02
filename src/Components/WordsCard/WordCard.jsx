@@ -22,10 +22,7 @@ class WordCard extends React.Component {
         }
     }
     render() {
-         let classFlipper = this.state.isOverturn? 'flipper': '';
-         let classContainer = this.state.isOverturn? 'flip-container': '';
         return (
-
             <div className={'flip-container'} >
                 <div className={'flipper'} >
                     {this.state.isOverturn ?
@@ -36,6 +33,7 @@ class WordCard extends React.Component {
                                             audioId={this.props.audioId}
                                             isTrain={this.props.isTrain}
                                             isOverturn={this.state.isOverturn}
+                                             audioArr={this.props.audioArr}
                                             changeIsOverturn={this.changeIsOverturn}
                                              checkAudio={this.props.checkAudio}
                             />

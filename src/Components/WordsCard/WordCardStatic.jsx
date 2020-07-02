@@ -8,7 +8,7 @@ class WordCardStatic extends React.Component {
     }
     checkResponse=()=>{
         debugger;
-        this.props.checkAudio(this.props.audioId)
+        this.props.checkAudio(this.props.audioId,this.props.audioArr)
     }
     render() {
 

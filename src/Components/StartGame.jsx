@@ -1,7 +1,7 @@
 import React from 'react';
 import './StartGame.css'
 
-class Button extends React.Component {
+class StartGame extends React.Component {
     state = {
         isRepeat: true,
         number: null
@@ -9,11 +9,13 @@ class Button extends React.Component {
     startGame = () => {
         this.setState({
             isRepeat: false
-        })
+        });
+        this.props.changeStart();
         this.playRandom();
     }
     playRandom = () => {
-       this.props.playRandom();
+       this.props.playRandom(this.props.audioArr);
+       debugger;
     }
     repeatAgain=()=>{
         new Audio(this.props.audioArr[this.props.currentAudioId].audio).play();
@@ -35,4 +37,4 @@ class Button extends React.Component {
     }
 }
 
-export default Button;
+export default StartGame;

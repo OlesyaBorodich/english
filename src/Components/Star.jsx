@@ -12,7 +12,9 @@ const Star = (props) => {
     }
 
     return (
-        <img style={ingStles} src={starT} alt=""/>
+        <span>
+        {props.el===1 ? <img style={ingStles} src={starT} alt=""/>:
+            <img style={ingStles} src={starF} alt=""/>}</span>
     )
 }
 

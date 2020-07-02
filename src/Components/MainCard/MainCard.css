@@ -25,8 +25,8 @@
     background: linear-gradient(180deg, #272bfd,#feb46b 40%,#fff 0,#fff);
 }
 .red{
-    background: -webkit-gradient(linear,left top,left bottom,from(#fd1518),color-stop(40%,#feb46b),color-stop(40%,#fff),to(#fff));
-    background: linear-gradient(180deg, #fd242e,#feb46b 40%,#fff 0,#fff);
+    background: -webkit-gradient(linear,left top,left bottom,from(#cd28fc),color-stop(40%,#feb46b),color-stop(40%,#fff),to(#fff));
+    background: linear-gradient(180deg, #c031fc,#feb46b 40%,#fff 0,#fff);
 }
 .all-cards{
     display: flex;
