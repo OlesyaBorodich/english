@@ -7,7 +7,7 @@ const MainCard = (props) => {
     let colorClass=props.isTrain?'card blue':'card red'
   return (
      <NavLink to={props.href} className={colorClass}>
-         <img className='avatar'alt="Remy Sharp" src={props.url}/>
+         <img className='avatar' src={props.url}/>
          {props.title}
      </NavLink>
   )
